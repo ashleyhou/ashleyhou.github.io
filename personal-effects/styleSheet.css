@@ -1,0 +1,34 @@
+
+body {
+    background-color: pink;
+}
+
+main {
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    padding: 4vw;
+    margin: 50px;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    /* never forget border-radius is yr friend in 2022 */
+    border-radius: 100px;
+}
+
+p {
+ 
+    position: relative;
+    margin: 35px;
+    background-color: pink;
+    padding: 4vw;
+    text-align: center;
+}
+
+#colorSelect {
+    font-weight:bold;
+    font-size: 10vw;
+}
+
+.theTxt {
+	font-size: 4vw;
+}
