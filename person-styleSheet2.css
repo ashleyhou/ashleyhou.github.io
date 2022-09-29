@@ -1,0 +1,30 @@
+body {
+    background-image: url("https://independent-photo.com/wp-content/uploads/2021/07/PAR13189-scaled.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    font-family: "Helvetica";
+    line-height: 1;
+}
+
+.stanza1 {
+	position: absolute;
+	text-align: center;
+	font-size: 150px;
+	color: white;
+}
+
+.fuck {
+	position: absolute;
+	text-align: center;
+	color: red;
+	font-size: 30px;
+	width: 100%;
+	bottom: 60px;
+}
+
+.p:hover {
+	color:red;
+}
