@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Button</title>
+</head>
+
+<style>
+    .button-img {
+        width: 300px;
+    }
+
+    .button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .back-drop {
+        height: 100vh;
+        width: 100vw;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<script>
+    const buttons = [   ["assets/buttons/clothing.png", "url(assets/backgrounds/background_clothing.jpeg)", ""],
+                    ["assets/buttons/computer.png", "url(assets/backgrounds/background_computer.jpeg)", "assets/sounds/computer.mp3"],
+                    ["assets/buttons/crosswalk.png", "url(assets/backgrounds/background_crosswalk.jpeg)", "assets/sounds/crosswalk.mp3"],
+                    ["assets/buttons/elevator.png", "url(assets/backgrounds/background_elevator.jpeg)", "assets/sounds/elevator.mp3"],
+                    ["assets/buttons/ignition.png", "url(assets/backgrounds/background_ignition.jpeg)", "assets/sounds/ignition.mp3"],
+                    ["assets/buttons/play.png", "url(assets/backgrounds/background_spotify.jpeg)"],
+                    ["assets/buttons/staples.png", "url(assets/backgrounds/background_staples.jpeg)", "assets/sounds/staples.mp3"],
+                    ["assets/buttons/tv.png", "url(assets/backgrounds/background_tv.jpeg)", "assets/sounds/tv.mp3"],
+                    ["assets/buttons/youtube.png", "url(assets/backgrounds/background_youtube.jpeg)", "assets/sounds/youtube.mp3"] ];
+
+    function runScript() {
+        var rand = Math.floor(Math.random()*buttons.length);
+        
+        document.getElementById("img").src=buttons[rand][0];
+        document.getElementById("back-drop").style.backgroundImage=buttons[rand][1];
+
+        //document.getElementById("audio").src=buttons[rand][2];
+        //var sound = Audio "assets/sounds/computer.mp3";
+        var sound = document.getElementById("audio").src=buttons[rand][2];
+        sound.play();
+    };
+</script>
+
+<body>
+    <div id="back-drop" class="back-drop">
+        <button class="button" onclick="runScript()"><img id="img" class="button-img" src="assets/buttons/unpushed.jpg"/></button>
+    </div>
+</body>
+</html>
