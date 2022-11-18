@@ -1,0 +1,23 @@
+body {
+	font-family: "Helvetica";
+	text-align: center;
+	font-size: 40px;
+	font-style: italic;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+.color img{
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-webkit-transition: all 1s ease;
+}
+.color img:hover{
+	filter: grayscale(0%);
+	filter: gray;
+	-webkit-filter: grayscale(0%);
+	filter: none;
+	transition: 1s ease;
+	-webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+}

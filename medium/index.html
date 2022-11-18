@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>typewriter</title>
+	<link rel="stylesheet" href="style.css">
+	<!--<script scr="script.js"></script>-->
+</head>
+<body>
+	<h1 id="pp"></h1>
+	<script>
+		var i1 = 0;
+		var txt1 = ' Printing, a ditto device. It created the portable book, which men could read in privacy and in isolation from others. Man could now inspire—and conspire.';
+		//var txt = 'Printing, a ditto device';
+		//var txt = ''
+		var speed = 50;
+		function printingpress() {
+			document.getElementById("pp").style.display = "block";
+		  if (i1 < txt1.length) {
+		    document.getElementById("pp").innerHTML += txt1.charAt(i1);
+		    i1++;
+		    setTimeout(printingpress, speed);
+		  }
+		 	document.getElementById("tw").style.display = "none";
+			document.getElementById("kb").style.display = "none";
+		}
+	</script>
+	<h1 id = "tw"></h1>
+	<script>
+		var i2 = 0;
+		//
+		var txt2 = ' The invention of type created linear, or sequential, thought, separating thought from action.'
+		var speed = 50;
+		function typewriter() {
+			//var txt == input;
+			document.getElementById("tw").style.display = "block";
+			if (i2 <txt2.length) {
+				document.getElementById("tw").innerHTML += txt2.charAt(i2);
+				i2++;
+				setTimeout(typewriter, speed);
+			}
+			document.getElementById("pp").style.display = "none";
+			document.getElementById("kb").style.display = "none";
+
+		}
+	</script>
+
+	<h1 id = "kb"></h1>
+	<script>
+		var i3 = 0;
+		//
+		var txt3 = ' Youth instinctively understands the present environment-the electric drama. It lives mythically and in depth. This is the reason for the great alienation between generations. '
+		var speed = 50;
+		function keyboard() {
+			//var txt == input;
+			document.getElementById("kb").style.display = "block";
+			if (i3 <txt3.length) {
+				document.getElementById("kb").innerHTML += txt3.charAt(i3);
+				i3++;
+				setTimeout(keyboard, speed);
+			}
+			document.getElementById("pp").style.display = "none";
+			document.getElementById("tw").style.display = "none";
+		}
+	</script>
+
+	<div class = "color">
+	<p><a href="#" onclick="printingpress();"><img src="assets/printingpress.png" width = 500></a></p>
+	<p><a href="#" onclick="typewriter();"><img src="assets/typewriter.png" width = 500></a></p>
+	<p><a href="#" onclick="keyboard();"><img src="assets/keyboard.png" width = 700></a></p>
+	</div>
+
+
+</body>
+</html>
