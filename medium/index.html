@@ -15,15 +15,18 @@
 		//var txt = 'Printing, a ditto device';
 		//var txt = ''
 		var speed = 50;
+		var typing = new Audio('assets/typing.mp3');
 		function printingpress() {
 			document.getElementById("pp").style.display = "block";
 		  if (i1 < txt1.length) {
+		  	//typing.play();
 		    document.getElementById("pp").innerHTML += txt1.charAt(i1);
 		    i1++;
 		    setTimeout(printingpress, speed);
 		  }
 		 	document.getElementById("tw").style.display = "none";
 			document.getElementById("kb").style.display = "none";
+
 		}
 	</script>
 	<h1 id = "tw"></h1>
@@ -42,6 +45,7 @@
 			}
 			document.getElementById("pp").style.display = "none";
 			document.getElementById("kb").style.display = "none";
+			i2 = 0;
 
 		}
 	</script>
@@ -62,6 +66,7 @@
 			}
 			document.getElementById("pp").style.display = "none";
 			document.getElementById("tw").style.display = "none";
+			i3 = 0;
 		}
 	</script>
 
