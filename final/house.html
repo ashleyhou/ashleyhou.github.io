@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>house scene</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="house.css">
+	<script src="index.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Copse">
+
+
+</head>
+<body>
+	<audio id="audio">
+		<source src="assets/rain.mp3" type="audio/mp3">
+	</audio>
+	<video autoplay muted loop id="house">
+  		<source src="assets/house.mp4" type="video/mp4">
+	</video>
+	<div class="overlay">
+		<p id="typing"></p>
+	</div>
+	<div class="overlay">
+		<p id="typing2"></p>
+	</div>
+
+	<div class="overlay letter">
+		<a href="rain.html"><img src="assets/letter.png" width="200px"></a>
+	</div>
+	
+	<script type="text/javascript">
+		var i = 0;
+		var txt = 'let me take that for you. no, kiddo, you dont have to carry anything. you go right ahead and ill just make a couple of trips. '
+		var speed = 50;
+
+		window.onload = function typewriter() {
+			if (i<txt.length) {
+				document.getElementById("typing").innerHTML += txt.charAt(i);
+				i++;
+				setTimeout(typewriter, speed);
+			}
+			if (i>=txt.length) {
+				typewriter2();
+			}
+		}
+	</script>
+	<script type="text/javascript">
+		var i2 = 0;
+		var txt2 = 'get in the house where its warm.'
+		var speed2 = 100;
+
+		function typewriter2() {
+			if (i2<txt2.length) {
+				document.getElementById("typing2").innerHTML += txt2.charAt(i2);
+				i2++;
+				setTimeout(typewriter2, speed2);
+			}
+		}
+	</script>
+
+
+</body>
+</html>

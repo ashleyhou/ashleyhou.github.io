@@ -1,0 +1,48 @@
+body {
+	background-image: url("assets/check.jpeg");
+	height: 100%;
+	/*background-position: center;*/
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#typing {
+	position: absolute;
+	font-family: 'Schoolbell', serif;
+	font-size: 50px;
+	color: rgb(203, 0, 0);
+	padding-left: 520px;
+	padding-right: 130px;
+	padding-top: 40px;
+}
+
+.money {
+	display: flex;
+	margin-left: 80%;
+	padding-top: 22%;
+}
+
+.money:hover {
+  animation: shake 3s;
+  animation-iteration-count: infinite;
+}
+.back:hover {
+  animation: shake 3s;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+

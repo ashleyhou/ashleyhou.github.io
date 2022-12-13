@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>introduction</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="index.js" defer></script>
+	
+</head>
+<body>
+	<script src="/script.js"></script>
+	<div class="container1">
+		<p id="typing"></p>
+	</div>
+	<div class="fish">
+		<a href="house.html"><img src="assets/fish.jpeg" width="200px"></a>
+	</div>
+	<script type="text/javascript">
+		var i = 0;
+		var txt = 'dedicated to my lovely parents'
+		var speed = 50;
+
+		window.onload = function typewriter() {
+			if (i<txt.length) {
+				document.getElementById("typing").innerHTML += txt.charAt(i);
+				i++;
+				setTimeout(typewriter, speed);
+			}
+		}
+	</script>
+	
+</body>
+</html>

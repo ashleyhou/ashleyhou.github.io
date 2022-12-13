@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>driving</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="driving.css">
+	<script src="index.js" defer ></script>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald">
+</head>
+<body>
+	<video autoplay muted loop id="driving">
+  		<source src="assets/driving.mp4" type="video/mp4">
+	</video>
+	
+	<div class="overlay">
+		<p id="typing"></p>
+	</div>
+
+	<div class="overlay ball">
+		<a href="tip.html"><img src="assets/8ball.png" width="200px"></a>
+	</div>
+	<div class="overlay back">
+		<a href="phone.html"><img src="assets/back.png" width="70px"></a>
+	</div>
+	<script type="text/javascript">
+		var i = 0;
+		var txt = 'YOU DONT HAVE TO TAKE THE SHUTTLE, ILL PICK YOU UP. FOUR A.M. ISNT THAT EARLY. ITLL GIVE ME A GOOD START ON THE REST OF THE DAY. ITLL BE NICE TO HAVE YOUR COMPANY.'
+		var speed = 50;
+
+		window.onload = function typewriter() {
+			if (i<txt.length) {
+				document.getElementById("typing").innerHTML += txt.charAt(i);
+				i++;
+				setTimeout(typewriter, speed);
+			}
+		}
+	</script>
+</body>
+</html>

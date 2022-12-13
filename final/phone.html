@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>phone</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="phone.css">
+</head>
+<body>
+	<div class="container back">
+		<a href="rain.html"><img src="assets/back.png" width="70px"></a>
+	</div>
+	<div class="container">
+		<div class="clock">
+			<a href="driving.html"><img src="assets/clock.png" width="200px;"></a>
+		</div>
+		<div class="phone">
+			<img src="assets/phone.png" width="700px;">
+		</div>
+
+		<div class="text">
+			<p id="typing"></p>
+		</div>
+		<div class="text">
+			<p id="typing2"></p>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var i = 0;
+		var txt = 'let me make a few calls for you. hold on, i have the number right here. did you want me to go with you? id be happy to; its no trouble at all. '
+		var speed = 50;
+
+		window.onload = function typewriter() {
+			if (i<txt.length) {
+				document.getElementById("typing").innerHTML += txt.charAt(i);
+				i++;
+				setTimeout(typewriter, speed);
+			}
+			if (i>=txt.length) {
+				typewriter2();
+			}
+		}
+	</script>
+	<script type="text/javascript">
+		var i2 = 0;
+		var txt2 = 'sure, i have time. i always have time for you.'
+		var speed2 = 50;
+
+		function typewriter2() {
+			if (i2<txt2.length) {
+				document.getElementById("typing").innerHTML += txt2.charAt(i2);
+				i2++;
+				setTimeout(typewriter2, speed);
+			}
+		}
+	</script>
+
+</body>
+</html>

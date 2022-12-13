@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stars</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="fin.css">
+	<script src="index.js" defer></script>
+</head>
+<body>
+	  <div class="bg"></div>
+	  <div class="overlay back">
+	  	<a href="end1.html"><img src="assets/back.png" width="70px"></a>
+	  </div>
+	  <div class="overlay">
+		<p id="typing"></p>
+		</div>
+		<div class="overlay">
+		<p id="typing2"></p>
+		</div>
+
+	  <script type="text/javascript">
+		var i = 0;
+		var txt = 'sure, i have time. i always have time for you.'
+		var speed = 50;
+
+		window.onload = function typewriter() {
+			if (i<txt.length) {
+				document.getElementById("typing").innerHTML += txt.charAt(i);
+				i++;
+				setTimeout(typewriter, speed);
+			}
+			else {
+				typewriter2();
+			}
+		}
+	</script>
+
+	<div class="stars">
+		<a href="index.html"><img src="assets/mif.png" width="200px"></a>
+	</div>
+	<script type="text/javascript">
+		var i2 = 0;
+		var txt2 = 'sure, whatever you need. whatever you need.'
+		var speed2 = 100;
+
+		function typewriter2() {
+			if (i2<txt2.length) {
+				document.getElementById("typing2").innerHTML += txt2.charAt(i2);
+				i2++;
+				setTimeout(typewriter2, speed2);
+			}
+		}
+	</script>
+</body>
+</html>

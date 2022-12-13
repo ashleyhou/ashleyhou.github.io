@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rain</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="rain.css">
+	<script src="index.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Allison">
+
+</head>
+<body>
+
+	  <div class="rain"></div>
+	  <div class="overlay back">
+	  	<a href="house.html"><img src="assets/back.png" width="70px"></a>
+	  </div>
+	  <div class="overlay">
+		<p id="typing"></p>
+		</div>
+
+	  <script type="text/javascript">
+		var i = 0;
+		var txt = 'let me drop you off. its raining pretty hard. ill go get the car.'
+		var speed = 50;
+
+		window.onload = function typewriter() {
+			if (i<txt.length) {
+				document.getElementById("typing").innerHTML += txt.charAt(i);
+				i++;
+				setTimeout(typewriter, speed);
+			}
+			if (i>=txt.length) {
+				typewriter2();
+			}
+		}
+	</script>
+
+	<div class="stars">
+		<a href="phone.html"><img src="assets/stars.png" width="200px"></a>
+	</div>
+</body>
+</html>
