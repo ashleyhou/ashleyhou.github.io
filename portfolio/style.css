@@ -106,3 +106,38 @@ transition: 1s ease;
 transform: scale(1.2);
 transition: 1s ease;
 }
+
+.hoverwrap {
+  position: relative;
+}
+
+.hoverwrap img { width: 100%; }
+
+.hovercap {
+  font-family: monospace;
+  font-size: 30px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 23px;
+
+  position: absolute;
+  text-align: center;
+
+
+  /*background-color: rgba(0,0,0,0.5);*/
+  color: black
+
+}
+
+.hovercap {
+  visibility: none; opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.hoverwrap:hover .hovercap {
+  visibility: visible; opacity: 1;
+}
+
+
+
+
